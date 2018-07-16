@@ -1,17 +1,75 @@
 .home {
+	position: relitive;
 	background-color:rgba(207,207,207, .06);
+	display:grid;
+
+
+	//justify-content:center;
+	justify-items:center;
+}
+
+.header {
+	align-self:center;
+	font-family: 'Montserrat';
+	color:white;
+	text-align: center;
+
+	&__skew{
+		
+		z-index:-10;
+		top:0;
+		left:0;
+		position:absolute;
+		width: 100vw;
+		height: 110vh;
+		background-color: #444;
+		clip-path: polygon(0 0, 100% 0%, 100% 25%, 0 50%);
+
+
+	}
+
+	&__border{
+		-webkit-backface-visibility:hidden;
+		z-index:-11;
+		top:0;
+		left:0;
+		position:absolute;
+		width: 100vw;
+		height: 110vh;
+		background-color: purple;
+		clip-path: polygon(0 45%, 100% 20%, 100% 27%, 0 52%);
+
+	}
+	
+	h1 {
+
+		font-size:36px;
+		font-weight: 600;
+		line-height:44px;
+		
+	}
+	p {
+		color: rgba(255, 255, 255, .6);
+		font-size: 15px;
+		font-weight: 300;
+		line-height: 19px;
+		width: 403px;
+	}
 }
 
 .card {
 	height: 736px;
 	width:1240px;
-	box-shadow: 0 4px 30px 0 rgba(0,0,0,.07);
-	border-radius: 7px;
+
+
 
 	display:grid;
 	grid-template-rows: 1fr 50px;
 
 	&__inputs {
+		box-shadow: 3px 1px 2px grey;
+		border-radius: 3px;
+
 		background-color:skyblue;
 		display:grid;
 		grid-template-rows: repeat(4, 1fr);
@@ -21,11 +79,24 @@
 }
 
 .input {
+	display: grid;
+    // grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: [number-s] 26px [number-e input-s] 1fr [input-e];
+
+    font-family: 'Montserrat';
+    text-align: center;
+    grid-column-gap: 8px;
+
+    height: 47px;
+
+
 	&__title {
 
 	}
 
 	input {
+		box-shadow: 0px 1px 1px grey;
+		border-radius: 7px;
 
 	}
 	&__number {
