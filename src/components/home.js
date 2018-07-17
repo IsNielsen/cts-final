@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Header from './header';
 import Card from './card';
+import Footer from './footer';
 
 class Home extends Component {
   render() {
@@ -9,6 +10,7 @@ class Home extends Component {
       <div className="home">
         { Header() }
         <Card />
+        { Footer() }
       </div>
     );
   }
